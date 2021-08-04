@@ -1,12 +1,13 @@
 import { DefineComponent } from "vue";
 import Home from "../pages/Home.vue";
 import SignIn from "../pages/SignIn.vue";
+import Profile from "../pages/Profile.vue";
+import Gallery from "../pages/Gallery.vue";
 import Page404 from "../pages/404.vue";
 
 type Route = {
   name: string;
   title?: string;
-  protect?: boolean;
   path: string;
   component: DefineComponent<{}, {}, any>;
 };
@@ -25,21 +26,14 @@ const routes: Route[] = [
     component: SignIn,
   },
   {
-    name: "sign-up",
-    title: 'Sign up',
-    path: "/sign-up",
-    component: Home,
-  },
-  {
     name: 'profile',
-    protect: true,
     path: '/profile',
-    component: Home,
+    component: Profile,
   },
   {
     name: 'images',
     path: '/images',
-    component: Home,
+    component: Gallery,
   },
   {
     path: "/:pathMatch(.*)*",

@@ -11,7 +11,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { AuthController } from '../controllers/AuthController'
 import { routes } from '../router/routes'
 
 export default defineComponent({
@@ -19,7 +18,6 @@ export default defineComponent({
   data() {
     return {
       routes,
-      user: AuthController.user,
     }
   }
 })
